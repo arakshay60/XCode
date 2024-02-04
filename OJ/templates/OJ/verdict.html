@@ -1,0 +1,48 @@
+{% extends 'OJ/main.html' %}
+
+{% block content %}
+<style>
+    .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #3498db;
+}
+
+.error-message {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success-message {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+</style>
+    <div class="container">
+        <h3>{{ verdict }}</h3>
+        {% if verdict == "Compilation Error" or verdict == "Runtime Error" %}
+            <div class="error-message">
+                <h4>{{ submission.stderr }}</h4>
+            </div>
+        {% else %}
+            <div class="success-message">
+                <h4>{{ comments|safe }}</h4>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'OJ/footer.html' %}
+{% endblock %}
+

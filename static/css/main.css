@@ -1,0 +1,43 @@
+
+
+
+
+/* Body styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Minimum height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    flex: 1;
+}
+
+
+
+/* Footer styles */
+
+
+footer {
+    background-color: white;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px; /* Adjust the horizontal spacing between links */
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    color: #333; /* Optionally set color for the separator */
+}
